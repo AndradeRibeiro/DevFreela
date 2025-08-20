@@ -1,0 +1,11 @@
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\bin\Debug\net9.0\DevFreela.Core.deps.json
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\bin\Debug\net9.0\DevFreela.Core.dll
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\bin\Debug\net9.0\DevFreela.Core.pdb
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.AssemblyInfoInputs.cache
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.AssemblyInfo.cs
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.csproj.CoreCompileInputs.cache
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.dll
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\refint\DevFreela.Core.dll
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\DevFreela.Core.pdb
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Core\obj\Debug\net9.0\ref\DevFreela.Core.dll
