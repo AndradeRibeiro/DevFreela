@@ -1,8 +1,7 @@
-﻿using DevFreela.Application.InputModels;
-using DevFreela.Application.Services.Interfaces;
+﻿using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
-using DevFreela.Core.Entities;
 using DevFreela.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace DevFreela.Application.Services.Implementations
 {
@@ -22,7 +21,10 @@ namespace DevFreela.Application.Services.Implementations
 
         public ProjectDetailsViewModel GetById(int id)
         {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.Id == id);
+            var project = _dbContext.Projects
+                .Include(p => p.Client)
+                .Include(p => p.Freelancer)
+                .SingleOrDefault(x => x.Id == id);
 
             if (project is null) return null;
 
@@ -32,47 +34,12 @@ namespace DevFreela.Application.Services.Implementations
                 project.Description,
                 project.TotalCost,
                 project.StartedAt,
-                project.FinishedAt
+                project.FinishedAt,
+                project.Client.FullName,
+                project.Freelancer.FullName
             );
 
             return projectDetailsViewModel;
-        }
-
-        public int Create(NewProjectInputModel inputModel)
-        {
-            var project = new Project(inputModel.Title, inputModel.Description, inputModel.IdClient, inputModel.IdFreelancer, inputModel.TotalCost);
-            _dbContext.Projects.Add(project);
-            return project.Id;
-        }
-
-        public void Update(UpdateProjectInputModel inputModel)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.Id == inputModel.Id);
-            project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost);
-        }
-
-        public void Delete(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.Id == id);
-            project.Cancel();
-        }
-
-        public void AddComment(NewCommentInputModel inputModel)
-        {
-            var comment = new ProjectComment(inputModel.Content, inputModel.IdProject, inputModel.IdUser);
-            _dbContext.ProjectComments.Add(comment);
-        }
-
-        public void Start(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.Id == id);
-            project.Start();
-        }
-
-        public void Finish(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.Id == id);
-            project.Finish();
         }
     }
 }

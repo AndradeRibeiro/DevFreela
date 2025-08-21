@@ -1,7 +1,5 @@
-﻿using DevFreela.Application.InputModels;
-using DevFreela.Application.Services.Interfaces;
+﻿using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
-using DevFreela.Core.Entities;
 using DevFreela.Infrastructure.Persistence;
 
 namespace DevFreela.Application.Services.Implementations
@@ -30,15 +28,6 @@ namespace DevFreela.Application.Services.Implementations
             );
 
             return userDetailsViewModel;
-        }
-
-        public int Create(NewUserInputModel inputModel)
-        {
-            var user = new User(inputModel.FullName, inputModel.Email, inputModel.BirthDate);
-
-            _dbContext.Users.Add(user);
-
-            return user.Id;
         }
     }
 }

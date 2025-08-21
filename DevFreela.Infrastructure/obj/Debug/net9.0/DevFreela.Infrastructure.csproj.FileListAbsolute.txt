@@ -1,4 +1,5 @@
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\bin\Debug\net9.0\DevFreela.Infrastructure.deps.json
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\bin\Debug\net9.0\DevFreela.Infrastructure.runtimeconfig.json
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\bin\Debug\net9.0\DevFreela.Infrastructure.dll
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\bin\Debug\net9.0\DevFreela.Infrastructure.pdb
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\bin\Debug\net9.0\DevFreela.Core.dll
@@ -8,8 +9,10 @@ C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.In
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.AssemblyInfo.cs
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.sourcelink.json
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreel.D77BFD02.Up2Date
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.dll
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\refint\DevFreela.Infrastructure.dll
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.pdb
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\DevFreela.Infrastructure.genruntimeconfig.cache
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Infrastructure\obj\Debug\net9.0\ref\DevFreela.Infrastructure.dll

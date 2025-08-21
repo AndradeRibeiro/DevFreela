@@ -10,6 +10,7 @@ C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Ap
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreela.Application.AssemblyInfoInputs.cache
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreela.Application.AssemblyInfo.cs
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreela.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreela.Application.sourcelink.json
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreel.D9F19A30.Up2Date
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\DevFreela.Application.dll
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.Application\obj\Debug\net9.0\refint\DevFreela.Application.dll

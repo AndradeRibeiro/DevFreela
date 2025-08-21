@@ -34,17 +34,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProjectModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProjectModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateProjectModel"
+                "$ref": "#/components/schemas/CreateProjectCommand"
               }
             }
           }
@@ -97,17 +97,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectModel"
+                "$ref": "#/components/schemas/UpdateProjectInputModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectModel"
+                "$ref": "#/components/schemas/UpdateProjectInputModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectModel"
+                "$ref": "#/components/schemas/UpdateProjectInputModel"
               }
             }
           }
@@ -160,17 +160,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentModel"
+                "$ref": "#/components/schemas/NewCommentInputModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentModel"
+                "$ref": "#/components/schemas/NewCommentInputModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCommentModel"
+                "$ref": "#/components/schemas/NewCommentInputModel"
               }
             }
           }
@@ -260,17 +260,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserModel"
+                "$ref": "#/components/schemas/NewUserInputModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserModel"
+                "$ref": "#/components/schemas/NewUserInputModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserModel"
+                "$ref": "#/components/schemas/NewUserInputModel"
               }
             }
           }
@@ -322,66 +322,13 @@
           }
         }
       }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
     "schemas": {
-      "CreateCommentModel": {
+      "CreateProjectCommand": {
         "type": "object",
         "properties": {
-          "content": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateProjectModel": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
             "type": "string",
             "nullable": true
@@ -389,24 +336,18 @@
           "description": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateUserModel": {
-        "type": "object",
-        "properties": {
-          "userName": {
-            "type": "string",
-            "nullable": true
           },
-          "password": {
-            "type": "string",
-            "nullable": true
+          "idClient": {
+            "type": "integer",
+            "format": "int32"
           },
-          "confirmPassword": {
-            "type": "string",
-            "nullable": true
+          "idFreelancer": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCost": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -425,35 +366,64 @@
         },
         "additionalProperties": false
       },
-      "UpdateProjectModel": {
+      "NewCommentInputModel": {
         "type": "object",
         "properties": {
-          "description": {
+          "content": {
             "type": "string",
             "nullable": true
+          },
+          "idProject": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idUser": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
-      "WeatherForecast": {
+      "NewUserInputModel": {
         "type": "object",
         "properties": {
-          "date": {
+          "fullName": {
             "type": "string",
-            "format": "date"
+            "nullable": true
           },
-          "temperatureC": {
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProjectInputModel": {
+        "type": "object",
+        "properties": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
+          "title": {
             "type": "string",
             "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalCost": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
