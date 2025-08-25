@@ -8,7 +8,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "query",
+        "Name": "param",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "DevFreela.Application.Commands.CreateProject.CreateProjectCommand",
+        "Type": "DevFreela.Application.Commands.ProjectCommands.CreateProject.CreateProjectCommand",
         "IsRequired": true
       }
     ],
@@ -61,8 +61,8 @@
         "IsRequired": true
       },
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.UpdateProjectInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.ProjectCommands.UpdateProject.UpdateProjectCommand",
         "IsRequired": true
       }
     ],
@@ -98,8 +98,8 @@
         "IsRequired": true
       },
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.NewCommentInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.ProjectCommands.CreateProjectComment.CreateProjectCommentCommand",
         "IsRequired": true
       }
     ],
@@ -138,6 +138,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DevFreela.API.Controllers.SkillsController",
+    "Method": "GetAll",
+    "RelativePath": "api/skills",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DevFreela.API.Controllers.UsersController",
     "Method": "Post",
     "RelativePath": "api/users",
@@ -146,8 +156,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "inputModel",
-        "Type": "DevFreela.Application.InputModels.NewUserInputModel",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.UserCommands.CreateUser.CreateUserCommand",
         "IsRequired": true
       }
     ],

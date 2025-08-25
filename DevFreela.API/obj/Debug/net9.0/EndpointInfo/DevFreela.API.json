@@ -13,7 +13,7 @@
         ],
         "parameters": [
           {
-            "name": "query",
+            "name": "param",
             "in": "query",
             "schema": {
               "type": "string"
@@ -97,17 +97,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProjectInputModel"
+                "$ref": "#/components/schemas/UpdateProjectCommand"
               }
             }
           }
@@ -160,17 +160,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommentCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommentCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCommentInputModel"
+                "$ref": "#/components/schemas/CreateProjectCommentCommand"
               }
             }
           }
@@ -228,6 +228,18 @@
         }
       }
     },
+    "/api/skills": {
+      "get": {
+        "tags": [
+          "Skills"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/users/{id}": {
       "get": {
         "tags": [
@@ -260,17 +272,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUserInputModel"
+                "$ref": "#/components/schemas/CreateUserCommand"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUserInputModel"
+                "$ref": "#/components/schemas/CreateUserCommand"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUserInputModel"
+                "$ref": "#/components/schemas/CreateUserCommand"
               }
             }
           }
@@ -352,21 +364,7 @@
         },
         "additionalProperties": false
       },
-      "LoginModel": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "NewCommentInputModel": {
+      "CreateProjectCommentCommand": {
         "type": "object",
         "properties": {
           "content": {
@@ -384,7 +382,7 @@
         },
         "additionalProperties": false
       },
-      "NewUserInputModel": {
+      "CreateUserCommand": {
         "type": "object",
         "properties": {
           "fullName": {
@@ -406,7 +404,21 @@
         },
         "additionalProperties": false
       },
-      "UpdateProjectInputModel": {
+      "LoginModel": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProjectCommand": {
         "type": "object",
         "properties": {
           "id": {

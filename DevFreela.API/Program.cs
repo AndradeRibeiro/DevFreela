@@ -9,7 +9,9 @@ using DevFreela.Application.Queries.ProjectQueries.GetAllProjects;
 using DevFreela.Application.Queries.ProjectQueries.GetProjectById;
 using DevFreela.Application.Queries.SkillQueries.GetAllSkills;
 using DevFreela.Application.Queries.UserQueries.GetUserById;
+using DevFreela.Core.Repositories;
 using DevFreela.Infrastructure.Persistence;
+using DevFreela.Infrastructure.Persistence.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -30,6 +32,10 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddDbContext<DevFreelaDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 builder.Services.AddMediatR(typeof(CreateProjectCommand).Assembly);
 builder.Services.AddMediatR(typeof(CreateProjectCommentCommand).Assembly);
 builder.Services.AddMediatR(typeof(UpdateProjectCommand).Assembly);
@@ -41,6 +47,7 @@ builder.Services.AddMediatR(typeof(GetAllProjectsQuery).Assembly);
 builder.Services.AddMediatR(typeof(GetAllSkillsQuery).Assembly);
 builder.Services.AddMediatR(typeof(GetProjectByIdQuery).Assembly);
 builder.Services.AddMediatR(typeof(GetUserByIdQuery).Assembly);
+
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();

@@ -1,4 +1,5 @@
 ﻿using DevFreela.Application.Commands.ProjectCommands.CreateProject;
+using DevFreela.Application.Commands.ProjectCommands.CreateProjectComment;
 using DevFreela.Application.Commands.ProjectCommands.DeleteProject;
 using DevFreela.Application.Commands.ProjectCommands.FinishProject;
 using DevFreela.Application.Commands.ProjectCommands.StartProject;
@@ -79,7 +80,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost("{id}/comments")]
-        public async Task<IActionResult> PostComment(int id, [FromBody] CreateProjectCommand command)
+        public async Task<IActionResult> PostComment(int id, [FromBody] CreateProjectCommentCommand command)
         {
             await _mediator.Send(command);
             return NoContent();
