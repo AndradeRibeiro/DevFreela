@@ -12,9 +12,14 @@ using DevFreela.Application.Queries.UserQueries.GetUserById;
 using DevFreela.Core.Repositories;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Infrastructure.Persistence.Repositories;
+using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using DevFreela.Application.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,19 +42,20 @@ builder.Services.AddScoped<ISkillRepository, SkillRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddMediatR(typeof(CreateProjectCommand).Assembly);
-builder.Services.AddMediatR(typeof(CreateProjectCommentCommand).Assembly);
-builder.Services.AddMediatR(typeof(UpdateProjectCommand).Assembly);
-builder.Services.AddMediatR(typeof(DeleteProjectCommand).Assembly);
-builder.Services.AddMediatR(typeof(StartProjectCommand).Assembly);
-builder.Services.AddMediatR(typeof(FinishProjectCommand).Assembly);
-builder.Services.AddMediatR(typeof(CreateUserCommand).Assembly);
-builder.Services.AddMediatR(typeof(GetAllProjectsQuery).Assembly);
-builder.Services.AddMediatR(typeof(GetAllSkillsQuery).Assembly);
-builder.Services.AddMediatR(typeof(GetProjectByIdQuery).Assembly);
-builder.Services.AddMediatR(typeof(GetUserByIdQuery).Assembly);
 
+builder.Services.Scan(scan => scan
+    .FromAssemblyOf<CreateUserCommandValidator>()
+    .AddClasses(c => c.AssignableTo(typeof(IValidator<>)))
+    .AsImplementedInterfaces()
+    .WithScopedLifetime());
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<FluentValidationFilter>();
+});
 
 builder.Services.AddControllers();
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

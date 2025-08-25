@@ -212,3 +212,5 @@ C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.AP
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.API\obj\Debug\net9.0\DevFreela.API.pdb
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.API\obj\Debug\net9.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.API\obj\Debug\net9.0\ref\DevFreela.API.dll
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.API\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Ester\Desktop\Ester-20250819T154915Z-1-001\Ester\DevFreela\DevFreela.API\bin\Debug\net9.0\Scrutor.dll

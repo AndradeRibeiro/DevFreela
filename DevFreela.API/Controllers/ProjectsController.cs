@@ -47,24 +47,13 @@ namespace DevFreela.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            if (command.Title.Length > 50)
-            {
-                return BadRequest();
-            }
-
             var id = await _mediator.Send(command);
-
             return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
         {
-            if (command.Description.Length > 200)
-            {
-                return BadRequest();
-            }
-
             await _mediator.Send(command);
 
             return NoContent();
@@ -83,6 +72,7 @@ namespace DevFreela.API.Controllers
         public async Task<IActionResult> PostComment(int id, [FromBody] CreateProjectCommentCommand command)
         {
             await _mediator.Send(command);
+
             return NoContent();
         }
 
