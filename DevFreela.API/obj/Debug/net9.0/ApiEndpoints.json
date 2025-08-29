@@ -182,19 +182,14 @@
   {
     "ContainingType": "DevFreela.API.Controllers.UsersController",
     "Method": "Login",
-    "RelativePath": "api/users/{id}/login",
+    "RelativePath": "api/users/login",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginModel",
-        "Type": "DevFreela.API.Models.LoginModel",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "",
+        "Name": "command",
+        "Type": "DevFreela.Application.Commands.UserCommands.LoginUser.LoginUserCommand",
         "IsRequired": true
       }
     ],
